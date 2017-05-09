@@ -1,0 +1,22 @@
+{
+  "name": "Spitfireclubvlaanderen",
+  "authors": [
+    "Stefaan Vandenborne <stefanvandenborne@gmail.com>"
+  ],
+  "description": "Spitfireclub Vlaanderen vzw, site in opdracht van Raoul Colin",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+    "jquery-backstretch": "https://github.com/jquery-backstretch/jquery-backstretch.git#^2.1.15"
+  }
+}
