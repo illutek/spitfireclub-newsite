@@ -10,8 +10,15 @@
 
 @font-face
   font-family: 'racing_sans_oneregular'
-  src: url('../fonts/racingsansone-regular-webfont.woff2') format('woff2')
-  src: url('../fonts/racingsansone-regular-webfont.woff') format('woff')
+  src: url('../fonts/racing/racingsansone-regular-webfont.woff2') format('woff2')
+  src: url('../fonts/racing/racingsansone-regular-webfont.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'open_sansregular'
+  src: url('../fonts/open_sans/opensans-regular-webfont.woff2') format('woff2')
+  src: url('../fonts/open_sans/opensans-regular-webfont.woff') format('woff')
   font-weight: normal
   font-style: normal
 
@@ -23,7 +30,20 @@
 @import "base/base-styles"
 
 // ================================
+// @@ MIXIN
+// ================================
+
+@import "mixin/transform"
+
+// ================================
 // @@ LAYOUT
 // ================================
 
 @import "layout/home-page"
+
+// ================================
+// @@ COMPONENTS
+// ================================
+
+@import "components/nav-page_top"
+@import "components/menu-left"
