@@ -7,12 +7,18 @@
 .path-frontpage
   .nav-page_top
     color: white
+    .menu-wrap_cta
+      li:last-child
+        border-left: solid 1px white
     a
       color: white
 
 .path-node
   .nav-page_top
     color: black
+    .menu-wrap_cta
+      li:last-child
+        border-left: solid 1px black
     a
       color: black
 
@@ -25,7 +31,6 @@
     display: block
     float: left
     margin-right: 50px
-    color: white
     .hamburger-img
       cursor: pointer
       vertical-align: middle
@@ -39,7 +44,7 @@
       padding-right: 15px
       &:last-child
         padding-left: 15px
-        border-left: solid 1px white
+
 
 +mQuery(479px)
   .nav-page_top
