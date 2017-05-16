@@ -4,23 +4,22 @@
 
 // afhankelijk van soort pagina wordt color white/black
 
+.nav-page_top //default black
+  color: black
+  .menu-wrap_cta
+    li:last-child
+      border-left: solid 1px black
+  a
+    color: black
+
 .path-frontpage
-  .nav-page_top
+  .nav-page_top //white menu
     color: white
     .menu-wrap_cta
       li:last-child
         border-left: solid 1px white
     a
       color: white
-
-.path-node
-  .nav-page_top
-    color: black
-    .menu-wrap_cta
-      li:last-child
-        border-left: solid 1px black
-    a
-      color: black
 
 .nav-page_top
   margin-left: 20px
@@ -44,7 +43,6 @@
       padding-right: 15px
       &:last-child
         padding-left: 15px
-
 
 +mQuery(479px)
   .nav-page_top

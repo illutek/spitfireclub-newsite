@@ -1,0 +1,27 @@
+globalstyle:
+  css:
+    theme:
+      css/styles.css: {}
+
+bootstrap:
+  version: 1.x
+  js:
+    bower_components/bootstrap/dist/js/bootstrap.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+globaljs:
+  js:
+    bower_components/jquery-backstretch/jquery.backstretch.min.js: {}
+    js/backstretch_drupal.js: {}
+    js/menu.js: {}
+  dependencies:
+      - core/jquery
+      - core/drupal.ajax
+      - core/drupal
+      - core/drupalSettings
+      - core/jquery.once

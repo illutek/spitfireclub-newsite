@@ -1,0 +1,13 @@
+name: spitfireclub
+type: theme
+description: 'Theme voor de club Spitfireclub Vlaanderen vzw'
+base theme: classy
+package: Custom
+core: 8.x
+version: 1.0.0
+libraries:
+  - spitfireclub/globalstyle
+  - spitfireclub/globaljs
+
+regions:
+  content:  Content

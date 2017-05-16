@@ -1,0 +1,28 @@
+<!--Menu left-->
+{% include directory ~ '/templates/partials/menu_left.html.twig' %}
+
+<section class="page-container">
+  {# Menu top #}
+  {% include directory ~ '/templates/partials/menu_top.html.twig' %}
+
+  <div class="container">
+    {# Page header #}
+    {% include directory ~ '/templates/partials/page-header.html.twig' %}
+
+    {% set classes = [
+    'agenda-page-wrap',
+    ] %}
+    <article {{ attributes.addClass(classes) }}>
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.content }}
+        </div>
+      </div>
+    </article>
+    <div class="agenda_beyond">
+      <a href="{{ base_path }}agenda-oud">Voorbije agenda items</a>
+    </div>
+  </div>
+</section>
+
+{% include directory ~ '/templates/partials/page_footer.html.twig' %}
