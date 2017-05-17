@@ -6,6 +6,17 @@
  * Time: 14:50
  */
 
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function spitfireclub_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $content_type = $node->bundle();
+        $suggestions[] = 'page__'.$content_type;
+    }
+}
+
 function spitfireclub_form_contact_message_contacteren_form_alter(&$form,\Drupal\Core\Form\FormStateInterface $form_state, $form_id){
     /**
      * Dit om het form (contact_message_contacteren) in een block in de footer te layouten
