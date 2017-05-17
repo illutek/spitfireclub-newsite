@@ -4,14 +4,18 @@
 
 .member-join-wrap
   min-height: 100vh
-  background-color: rgba(255, 255, 255, 0.8)
+  background-color: rgba(255, 255, 255, 0.9)
   color: $dark-gray
-  width: 500px
+  width: 600px
   position: fixed
   padding: 20px 0  0 50px
+  border-right: 1px solid $dark-gray
   +transition(0.5s)
-  transform: translate(-500px,0px)
-  left: -500px
+  transform: translate(-600px,0px)
+  left: -600px
   z-index: 999
   .close-btn
     cursor: pointer
+  &.member-join__visible
+    +transition(0.5s)
+    transform: translate(600px,0px)

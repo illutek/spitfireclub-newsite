@@ -19,6 +19,7 @@ globaljs:
     bower_components/jquery-backstretch/jquery.backstretch.min.js: {}
     js/backstretch_drupal.js: {}
     js/menu.js: {}
+    js/member-join.js: {}
   dependencies:
       - core/jquery
       - core/drupal.ajax

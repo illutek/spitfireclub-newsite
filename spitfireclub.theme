@@ -1,0 +1,44 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: stefan
+ * Date: 17.05.17
+ * Time: 14:50
+ */
+
+function spitfireclub_form_nog_instellen_form_alter(&$form,\Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+    /**
+     * Dit om het form (contact_message_contacteren) in een block in de footer te layouten
+     */
+    // Name
+    $form['name']['#prefix'] = '<div class="row"><div class="col-sm-5"><div class="form-group">';
+    $form['name']['#suffix'] = '</div>';
+    $form['name']['#attributes']['placeholder'][] = $form['name']['#title'].'*';
+    $form['name']['#attributes']['class'][] = 'form-control custom__height';
+    unset($form['name']['#title']);
+
+    // Mail
+    $form['mail']['#prefix'] = '<div class="form-group">';
+    $form['mail']['#suffix'] = '</div></div>';
+    $form['mail']['#attributes']['placeholder'][] = $form['mail']['#title'].'*';
+    $form['mail']['#attributes']['class'][] = 'form-control custom__height';
+    unset($form['mail']['#title']);
+
+
+    // Message
+    // rows=5 hoogte is in verschillende browsers niet gelijk daarom een extra class 'height__textarea'
+    $form['message']['widget'][0]['value']['#attributes']['class'][] = 'form-control height__textarea';
+    $form['message']['widget'][0]['value']['#attributes']['rows'][] = '5';
+    $form['message']['widget'][0]['value']['#attributes']['placeholder'][] = $form['message']['widget'][0]['#title'].'*';
+    $form['message']['widget'][0]['#title'] = '';
+    unset($form['message']['widget'][0]['value']['#title']);
+    $form['message']['widget'][0]['#prefix'] = '<div class="col-sm-5"><div class="form-group">';
+    $form['message']['widget'][0]['#suffix'] = '</div></div>';
+
+    // Submit
+    $form['actions']['#prefix'] = '<div class="col-sm-2">';
+    $form['actions']['#suffix'] = '</div></div>';
+    $form['actions']['submit']['#attributes']['class'][] = 'btn';
+    $form['actions']['submit']['#attributes']['class'][] = 'btn-custom';
+
+}
