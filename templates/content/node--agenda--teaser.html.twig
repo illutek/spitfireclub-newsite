@@ -85,7 +85,9 @@
     <div class="agenda-teaser-title">
       {{ label }}
     </div>
-    <h2>{{ content.field_agenda_date }}</h2>
+    <div class="agenda-teaser-date">
+      {{ content.field_agenda_date }}
+    </div>
     <p>
       {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
     </p>

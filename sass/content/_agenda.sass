@@ -3,7 +3,7 @@
 // ////////////////////////
 
 // FULL VIEW
-
+// ==================================================
 .agenda_date
   margin-bottom: 1em
   font-size: 1.25em
@@ -20,21 +20,31 @@
   margin-top: 1em
   padding-top: 1em
 
-// TEASER VIEW
 
+// TEASER VIEW
+// ====================================================
 .agenda-page-wrap
   padding: 1em
   background-color: $dark-gray
   margin-top: 10px
-  h2
-    color: white
+  .agenda-page-content
+    display: block
+    h2
+      color: white
+      margin-left: 15px
+  .agenda_beyond
+    clear: both
+    padding: 15px 0 15px 15px
+    a
+      color: white
+
   .agenda-teaser-wrap
     padding: 1em
     background-color: white
     height: 350px
     .agenda-teaser-title
       margin-bottom: 10px
-    h2
+    .agenda-teaser-date
       font-family: 'racing_sans_oneregular'
       color: $blue-spitfire
       text-align: center
