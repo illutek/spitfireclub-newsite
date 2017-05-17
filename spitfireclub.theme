@@ -6,7 +6,7 @@
  * Time: 14:50
  */
 
-function spitfireclub_form_nog_instellen_form_alter(&$form,\Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+function spitfireclub_form_contact_message_contacteren_form_alter(&$form,\Drupal\Core\Form\FormStateInterface $form_state, $form_id){
     /**
      * Dit om het form (contact_message_contacteren) in een block in de footer te layouten
      */
