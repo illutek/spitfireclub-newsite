@@ -82,18 +82,10 @@
   {% endif %}
   {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
+  <img src="{{ base_path ~ directory }}/images/technique-cover-img.jpg" alt="Spitfire Technique">
 
-  <div{{ content_attributes }}>
-    {{ content }}
+  <div{{ content_attributes.addClass('technique-intro') }}>
+    {{ content.body }}
   </div>
 
 </article>

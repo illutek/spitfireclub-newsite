@@ -1,4 +1,3 @@
-
 <!--Menu left-->
 {% include directory ~ '/templates/partials/menu_left.inc.html.twig' %}
 
@@ -9,23 +8,183 @@
   {# Menu top #}
   {% include directory ~ '/templates/partials/menu_top.inc.html.twig' %}
 
+  <div class="container">
+    {# Page header #}
+    {% include directory ~ '/templates/partials/page-header.inc.html.twig' %}
+  </div>
+
+  <div class="gray-block">
     <div class="container">
-
-      {# Page header #}
-      {% include directory ~ '/templates/partials/page-header.inc.html.twig' %}
-
-        <article class="content-wrap">
-            <div class="row">
-                <div class="col-md-12">
-                  {{ page.content }}
-                </div>
-            </div>
-        </article>
+      <article class="content-technique-wrap text-center">
+        <div class="row">
+          <div class="col-md-12">
+            {{ page.content }}
+          </div>
+        </div>
+      </article>
     </div>
+  </div>
 </section>
 
-{#Region footer contact#}
-{% include directory ~ '/templates/partials/footer-contact.inc.html.twig' %}
+<div class="html-technique">
+  <section class="gray-block">
+    <div class="container">
+      <h3 class="text-center">Kleppen</h3>
+      <p>Een goede afstelling van de kleppen is vooral met het gebruik van het huidige "vuurwater" erg belangerijk.
+        Toen onze Spit gebouwd werd en de wagens nog met echte benzine reden werd afstellen om de 20000 km aangeraden.
+        Nu is een controle om de 10000 km zeker geen overbodige luxe. (tenzij de cilinderkop aangepast werd op
+        loodvrije)</p>
+      <h4>Waarom kleppen stellen?</h4>
+      <img src="{{ base_path ~ directory }}/images/technique/kleppen.jpg" alt="Spitfire kleppen">
+      <p>Steeds de kleppen afstellen bij koude motor!
 
-{#Region footer#}
-{% include directory ~ '/templates/partials/page_footer.inc.html.twig' %}
+        Verwijder het kleppendeksel om de toegang tot de tuimelaars te verkrijgen en verwijder de bougies zodat de
+        motor makkelijker kan rondgedraaid worden.
+
+        De kleppen van voren naar achteren nummeren. De krukas draaien door aan de ventilatorbladen te draaien totdat
+        de kleppen volgende standen bereiken:</p>
+      <p>Kleppen 1 en 3 afstellen terwijl kleppen 6 en 8 ingedrukt zijn <br>
+        Kleppen 2 en 5 afstellen terwijl kleppen 4 en 7 ingedrukt zijn <br>
+        Kleppen 6 en 8 afstellen terwijl kleppen 1 en 3 ingedrukt zijn <br>
+        Kleppen 4 en 7 afstellen terwijl kleppen 2 en 5 ingedrukt zijn. </p>
+      <p>
+        Een voelermaatje van 0,25 mm (0.010 in) tussen de toppen van elke klep en de tuimelaar steken om de
+        tuimelaarspeling
+        van elk paar kleppen bij bovengenoemde 4 standen te controleren. Waar afstelling noodzakelijk is, de
+        stelschroef
+        naar vereiste draaien, zodat een weinig wrijving ontstaat wanneer het voelermaatje over de kleptop bewogen
+        wordt.
+        De stelschroef opnieuw vastdraaien en de speling opnieuw controleren.
+      </p>
+      <p>
+        Bougies en kleppendeksel terug monteren. Gebruik een nieuw dichting.
+      </p>
+
+    </div>
+  </section>
+
+
+  <section class="gray-block">
+    <div class="container">
+      <h3 class="text-center">Ontsteking</h3>
+      <p>
+        Alvorens te starten met de werkzaamheden eerst alvast de technische gegevens betreffende de ontsteking en
+        motorafstelling. Gegevens zijn voor een 1500. Waar die afwijken staan de gegevens voor de 1300 tussen
+        haakjes in het rood.
+      </p>
+      <p>
+        wat meten? eenheid te meten waarde <br>
+        bobine Merk Lucas <br>
+        bobine Type 15C6 (16C6) <br>
+        ballastweerstand (niet altijd aanwezig) ohm 1,3 - 1,5 <br>
+        primaire weerstand ohm 1,30 - 1,45 (1,43 - 1,58) <br>
+        ontstekingsvolgorde 1 - 3 - 4 - 2 <br>
+        afstand contactpunten mm 0,5 (0,4) <br>
+        kontakthoek ° / (%) 46-56 (51-62) [40-42 (44-47)] <br>
+        ontstekingstijdstip - voor BDP statisch ° 10° (6° tot motornummer FK25000, 8° nadien) <br>
+        ontstekingstijdstip - dynamisch en vacuümkromme op aanvraag volgens type <br>
+        Bougies MK I en II merk Champion L87Y (korte schacht) <br>
+        Bougies MK III en IV merk Champion N9Y (lange schacht) <br>
+        Bougies 1500 merk Champion N12Y (lange schacht) <br>
+        elektrodenafstand mm 0,65 <br>
+
+        stationair toerental RPM 650 - 750 (800 - 850) <br>
+        CO gehalte bij stat. toerental Vol % CO 3,0 - 4,0 (2,5 - 4,5) <br>
+        HC gehalte bij stat. toerental ppm 500 <br>
+        CO² gehalte bij stat toerental Vol % CO² 13 - 16 <br>
+        O² gehalte bij stat toerental Vol % O² 0,5 - 2,0 <br>
+        druk brandstofpomp bar 0,1 - 0,18
+      </p> <br>
+      <p>
+        Om goed te kunnen functioneren hebben we bij een benzinemotor een elektrische vonk nodig die het
+        benzine/luchtmengsel in de verbrandingskamer op het juiste moment ontsteekt. Het ontstekingssysteem is
+        gebaseerd op het in een spoel (bobine) omzetten van de lage batterijspanning in een hoge spanning tussen
+        de elektroden van de bougies. De vonk die daar ontstaat doet het mengsel ontbranden. De hoogspanning in de
+        spoel ontstaat door het stelselmatig onderbreken en terug schakelen van de laagspanning. Dit gebeurt bij onze
+        wagentjes nog door middel van kontaktpuntjes (vis platinéés) Latere US modellen waren uitgerust met een
+        elektronisch systeem. Dit systeem komt hier niet ter sprake, meer inlichtingen bij
+        info@spitfireclubvlaanderen.be . Noteer ook dat dit systeem al vele jaren niet meer gebruikt wordt en
+        enkel terug te vinden is op oldtimers.
+      </p>
+      <p>
+        De kontaktpuntjes dus: als je weet dat bij een 4 cilinder motor de kontakten 2 maal schakelen per
+        krukasomwenteling (4 maal per nokkenasomwenteling = 2 krukasomwentelingen) begrijp je dat bij een
+        snelheid van ± 90km/u de kontaktpuntjes 6000 keer per minuut schakelen. Dus 100 keer per seconde. Ze
+        moeten dus wel in topconditie zijn, anders loopt het mis. Om de 10000 km bijregelen en na 15000 km vervangen.
+      </p> <br>
+      <img src="{{ base_path ~ directory }}/images/technique/punten.png" alt="Spitfire ontstekingspunten">
+      <p>
+        Afstellen <br>
+        <br>
+        Verwijder de 2 klemmen en neem de kap voorzichtig van de stroomverdeler af. Reinig de binnenkant met een
+        droge vod. Indien de koperen kontakten aan de binnenkant ingebrand zijn, vervang de kap. Druk een paar
+        keer op het kooltje in het midden, dit moet soepel bewegen. Verwijder de rotor voorzichtig. Draai de motor
+        rond tot de nok op de as de kontaktpunten zo ver mogelijk oplichten (1). Meet met een voelermaatje van
+        0,4 mm de afstand tussen de kontactpunten (2). Indien de afstand niet klopt, draai dan de schroef (3)
+        een weinig los Controleer ook of de puntjes niet ingebrand zijn, indien dit zo is moeten de
+        kontaktpunten vervangen worden. Blauw gebrande kontakten wijzen op een defekte condensator.
+        Beide vervangen!
+      </p>
+      <p>
+        Vervangen <br> <br>
+
+        Verwijderen: bewegende contactveer van klempunt verwijderen en tegelijkertijd de contactarm van de
+        draaipunt aflichten. De twee kabels van het klempunt losmaken, de schroef (3) verwijderen en de vaste
+        contactpunten uitlichten.
+        monteren: beschermmiddel van de nieuwe contactpunten verwijderen met wat benzine, het vaste contact over het
+        draapunt aanbrengen en met de schroef (3) los bevestigen op de basisplaat.
+        De twee kabels aan het klempunt bevestigen en, terwijl het veerblad tegen de bewegende contactarm
+        gedrukt wordt, de samenstelling over het draaipunt neerlaten. De veer in het klempunt aanbrengen om de twee
+        aansluitingen aan de achterkan stevig in te sluiten.
+        Contactpuntafstand afstellen en de schroef aandraaien.
+      </p> <br>
+      <p>Terug monteren van kap en kabels</p> <br>
+      <img src="{{ base_path ~ directory }}/images/technique/firingorder.jpg" alt="Spitfire kabels volgorde">
+      <p>
+        Let bij de montage op de volgorde van de kabels. De ontstekingsvolgorde is 1-3-4-2. De plaats van de eerst
+        cilinder is gemerkt met het zwarte rondje.
+        Let op: de stroomverdeler draait tegen wijzerzin. (wat verwacht ge anders van een Engelse auto?)
+      </p> <br> <br>
+      <p>
+        Afstellen ontstekingstijdstip
+      </p> <br>
+      <img src="{{ base_path ~ directory }}/images/technique/merktekens.png" alt="Spitfire onsteking merktekens">
+      <p>
+        Nadat we de kontaktpuntjes vervangen hebben is het nodig het ontstekingstijdstip opnieuw af te stellen. Dit
+        kan op 2 manieren, nl. statisch en dynamisch. De dynamische afstelling is de meest juiste en gebeurt bij
+        draaiende motor met behulp van een stroboscooplamp. Wie dergelijke lamp heeft zal ook wel op de hoogte
+        zijn van het gebruik. De centrifugaal en vacuüm krommes zijn te verkrijgen op aanvraag. Wel het juiste
+        motortype opgeven aub.
+        Statische afstelling gebeurt als volgt:
+      </p>
+      <p>
+      <ol>
+        <li>
+          Plaats een 12 volt testlampje tussen de massa en de en de negatieve uitgang van de bobin
+        </li>
+        <li>
+          Verwijder de kap van de stroomverdeler en draai de krukas tot de inkeping op de poulie overeen komt met de
+          juiste waarde (zie tabel hierboven)
+        </li>
+        <li>
+          Controleer dat de rotorarm naar het contact van de eerst cilinder wijst, draai anders nog een rondje verder.
+        </li>
+        <li>
+          Draai de klembout van de stroomverdeler iets los
+        </li>
+        <li>
+          Zet het contact aan. Draai de stroomverdeler in tegenwijzerzin tot het testlampje brandt, draai vervolgens
+          terug in wijzerzin tot het lampje juist uitdooft.
+        </li>
+        <li>
+          Maak de klembout vast, zet het contact af en verwijder de testlamp.
+        </li>
+      </ol>
+      </p>
+    </div>
+  </section>
+  {#Region footer contact#}
+  {% include directory ~ '/templates/partials/footer-contact.inc.html.twig' %}
+
+  {#Region footer#}
+  {% include directory ~ '/templates/partials/page_footer.inc.html.twig' %}
