@@ -1,17 +1,17 @@
 <!--Menu left-->
-{% include directory ~ '/templates/partials/menu_left.html.twig' %}
+{% include directory ~ '/templates/partials/menu_left.inc.html.twig' %}
 
 {#Lid worden#}
-{% include directory ~ '/templates/partials/member-join.html.twig' %}
+{% include directory ~ '/templates/partials/member-join.inc.html.twig' %}
 
 <section class="page-purchases-container">
   {# Menu top #}
-  {% include directory ~ '/templates/partials/menu_top.html.twig' %}
+  {% include directory ~ '/templates/partials/menu_top.inc.html.twig' %}
 
   <div class="container">
 
     {# Page header #}
-    {% include directory ~ '/templates/partials/page-header.html.twig' %}
+    {% include directory ~ '/templates/partials/page-header.inc.html.twig' %}
 
     <article class="content-wrap">
       <div class="row">
@@ -23,8 +23,7 @@
       </div>
     </article>
 <div class="arrow-down text-center">
-  {#TODO image arrow down#}
-  PIJL OMLAAG
+  <img src="{{ base_path ~ directory }}/images/arrow-down.png" alt="arrow-down">
 </div>
   </div>
 </section>
@@ -43,10 +42,9 @@
         je haren voelen is voor jou de max - een verkoudheid of een stijve nek
         neem je er graag bij....</p>
       <p>Je wil nog voelen dat je per auto rijdt, je wil de weg voelen..</p>
-
-
     </div>
   </section>
+
   <section class="gray-block">
     <div class="container text-center">
       <h3>Waarom niet kopen?</h3>
@@ -161,8 +159,7 @@
 
   <section class="gray-block">
     <div class="container text-center">
-      <h3>
-        De jacht kan nu beginnen.</h3>
+      <h3>De jacht kan nu beginnen.</h3>
       <p>
         Er zijn nog heel wat Spitfire's te vinden, sommige in goede originele staat, de meeste zien er enkel goed uit.
         Verken de markt, lees de advertenties in gespecialiseerde bladen en club magazines. Meestal kan men bij de
@@ -175,10 +172,10 @@
     </div>
   </section>
 </div>
-{#end html-purchases#}
+{# end html-purchases #}
 
 {#Region footer contact#}
-{% include directory ~ '/templates/partials/footer-contact.html.twig' %}
+{% include directory ~ '/templates/partials/footer-contact.inc.html.twig' %}
 
 {#Region footer#}
-{% include directory ~ '/templates/partials/page_footer.html.twig' %}
+{% include directory ~ '/templates/partials/page_footer.inc.html.twig' %}

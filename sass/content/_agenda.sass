@@ -1,9 +1,19 @@
 // /////////////////////////
 // @@ AGENDA
 // ////////////////////////
+// bij full view content op witte achtergrond, bij de teaser worden de tegels op
+// een grijze achtergrond getoond zowel bij de full als teaser node zitten we met
+// dezelfde structuur agenda-page-wrap/agenda-page-content om toch een verschil
+// te maken gebruik gemaakt van de body class page-node-type-agenda (page--agenda.html.twig)
 
 // FULL VIEW
 // ==================================================
+.page-node-type-agenda
+  .agenda-page-wrap
+    background-color: white
+    .agenda-page-content
+      h2
+        color: $dark-gray
 .agenda_date
   margin-bottom: 1em
   font-size: 1.25em
