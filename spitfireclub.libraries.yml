@@ -14,10 +14,13 @@ bootstrap:
     - core/drupalSettings
     - core/jquery.once
 
-globaljs:
+backstretch:
   js:
     bower_components/jquery-backstretch/jquery.backstretch.min.js: {}
     js/backstretch_drupal.js: {}
+
+globaljs:
+  js:
     js/menu.js: {}
     js/member-join.js: {}
   dependencies:
