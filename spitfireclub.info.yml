@@ -12,3 +12,4 @@ libraries:
 regions:
   content:  Content
   footercontact: 'Footer contact'
+  boardmembers: Bestuursleden
