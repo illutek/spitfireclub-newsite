@@ -1,16 +1,16 @@
 {#
 /**
  * Header op de pages een opsomming van deze
- *
+ * alle enkel niet de home
 */
 #}
 
-<header>
+<header class="page-header">
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-9 col-xs-7">
       <h1>SPITFIRECLUB VLAANDEREN</h1>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-xs-3">
       <a href="{{ path('<front>') }}">
         <img src="{{ base_path ~ directory }}/images/logo.png" alt="Logo Spitfireclub Vlaanderen">
       </a>
