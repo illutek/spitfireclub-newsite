@@ -16,3 +16,34 @@
     margin-top: 50px
   .arrow-down
     margin-top: 35px
+
++mQuery(1081px)
+  .page-purchases-container
+    .content-purchases
+      margin-top: 20px
+    .arrow-down
+      margin-top: 25px
+      img
+        width: 32px
+        height: auto
+
+
++mQuery(479px)
+  .nav-page_top //default black
+  color: black
+  .menu-wrap_cta
+    li
+      border-right: solid 1px black
+  a, .btn-hamburger_menu
+    color: rgba(0, 0, 0, 1)
+    &:hover
+      color: rgba(0, 0, 0, 0.5)
+      transition: all 0.3s ease-in-out
+  .page-purchases-container
+    color: $dark-gray
+    background: none
+    height: auto
+    .content-purchases
+      margin-top: 10px
+    .arrow-down
+      display: none
