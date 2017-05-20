@@ -37,13 +37,14 @@
     &:hover
       text-decoration: none
 
-  .btn-hamburger_menu
+  .btn-hamburger_menu, .social-icons
+    cursor: pointer
     display: block
     float: left
     margin-right: 50px
-
+  .social-icons
+    padding-top: 10px
     .hamburger-img
-      cursor: pointer
       vertical-align: middle
     label
       padding-right: 15px
@@ -60,6 +61,15 @@
 
 +mQuery(479px)
   .nav-page_top
+    font-size: 1em
+    margin-left: 10px
     .btn-hamburger_menu
-      label
-        display: none
+      margin-right: 15px
+    .social-icons
+      display: none
+    .menu-wrap_cta
+      li
+        padding-right: 10px
+        padding-left: 10px
+
+

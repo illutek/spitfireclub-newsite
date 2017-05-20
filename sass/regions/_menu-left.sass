@@ -23,9 +23,11 @@
     margin-top: 20px
     font-size: 1.25em
     a
-      color: white
+      color: rgba(255, 255, 255, 1)
       &:hover
         text-decoration: none
+        color: rgba(255, 255, 255, 0.5)
+        transition: all 0.3s ease-in-out
     ul
       list-style-type: none
       padding-left: 0
@@ -43,7 +45,14 @@
     text-align: right
 
 +mQuery(497px)
+  .menu-left-wrapper
+    width: 300px
+    padding: 20px 0  0 30px
+    .menu-items-wrap
+      ul
+        li
+          line-height: 1.6em
   .menu-left__footer
     .menu-left__footer-copy
       text-align: left
-      margin-top: 15px
+      font-size: 0.4em
