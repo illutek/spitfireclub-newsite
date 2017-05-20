@@ -7,42 +7,56 @@
 .nav-page_top //default black
   color: black
   .menu-wrap_cta
-    li:last-child
-      border-left: solid 1px black
-  a
-    color: black
+    li
+      border-right: solid 1px black
+  a, .btn-hamburger_menu
+    color: rgba(0, 0, 0, 1)
+    &:hover
+      color: rgba(0, 0, 0, 0.5)
+      transition: all 0.3s ease-in-out
+
 
 .path-frontpage, .page-node-type-aankopen, .page-node-type-geschiedenis
   .nav-page_top //white menu
     color: white
     .menu-wrap_cta
-      li:last-child
-        border-left: solid 1px white
-    a
-      color: white
+      li
+        border-right: solid 1px white
+    a, .btn-hamburger_menu
+      color: rgba(255, 255, 255, 1)
+      &:hover
+        color: rgba(255, 255, 255, 0.5)
+        transition: all 0.3s ease-in-out
+
 
 .nav-page_top
+  font-family: open_sansbold
+  font-size: 1.4em
   margin-left: 20px
   a
     &:hover
       text-decoration: none
+
   .btn-hamburger_menu
     display: block
     float: left
     margin-right: 50px
+
     .hamburger-img
       cursor: pointer
       vertical-align: middle
     label
       padding-right: 15px
   .menu-wrap_cta
-    padding-top: 12px
+    padding-top: 10px
     li
       display: block
       float: left
-      padding-right: 15px
+      padding-right: 30px
+      padding-left: 30px
       &:last-child
-        padding-left: 15px
+        padding-right: 0
+        border: none
 
 +mQuery(479px)
   .nav-page_top
