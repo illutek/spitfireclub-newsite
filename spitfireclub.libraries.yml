@@ -23,6 +23,7 @@ globaljs:
   js:
     js/menu.js: {}
     js/member-join.js: {}
+    js/fixnav.js: {}
   dependencies:
       - core/jquery
       - core/drupal.ajax
