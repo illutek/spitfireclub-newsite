@@ -22,6 +22,12 @@
         margin-top: 0
         margin-bottom: 0
 
+.fbva-logo
+  position: absolute
+  z-index: 999
+  right: 50px
+  bottom: 50px
+
 +mQuery(479px)
   .home-container
     .site-branding
@@ -34,6 +40,12 @@
       .title
         h1
           font-size: 3em
+  .fbva-logo
+    right: 20px
+    bottom: 10px
+    img
+      width: 64px
+      height: auto
 
 +mQuery(321px)
   .home-container
