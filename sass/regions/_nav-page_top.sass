@@ -7,39 +7,57 @@
 .nav-page_top //default black
   color: black
   background: rgba(255, 255, 255, 0.1)
+  li
+    border-right: solid 1px black
   .menu-wrap_cta
-    li
-      border-right: solid 1px black
   a, .btn-hamburger_menu
     color: rgba(0, 0, 0, 1)
     &:hover
       color: rgba(0, 0, 0, 0.5)
       transition: all 0.3s ease-in-out
   &.fixednav
-    background: rgba(255, 255, 255, 0.9)
+      transition: all 0.9s ease-in-out
+      padding: 20px 35px
+      background: rgba(0, 0, 0, 0.7)
+      li
+        border-right: solid 1px white
+      a, .btn-hamburger_menu
+        color: rgba(255, 255, 255, 1)
+        &:hover
+          color: rgba(255, 255, 255, 0.5)
+          transition: all 0.3s ease-in-out
 
 
 
 .path-frontpage, .page-node-type-aankopen, .page-node-type-geschiedenis
   .nav-page_top //white menu
     color: white
-    background: rgba(0, 0, 0, 0.1)
+    background: rgba(0, 0, 0, 0.2)
+    li
+      border-right: solid 1px white
     .menu-wrap_cta
-      li
-        border-right: solid 1px white
     a, .btn-hamburger_menu
       color: rgba(255, 255, 255, 1)
       &:hover
         color: rgba(255, 255, 255, 0.5)
         transition: all 0.3s ease-in-out
-    &.fixednav
-      background: rgba(0, 0, 0, 0.7)
 
+    &.fixednav
+      transition: all 0.9s ease-in-out
+      padding: 20px 35px
+      background: rgba(255, 255, 255, 0.7)
+      li
+        border-right: solid 1px black
+      a, .btn-hamburger_menu
+        color: rgba(0, 0, 0, 1)
+        &:hover
+          color: rgba(0, 0, 0, 0.5)
+          transition: all 0.3s ease-in-out
 
 .nav-page_top
   font-family: open_sansbold
   font-size: 1.4em
-  padding: 20px 35px
+  padding: 10px 35px
   z-index: 900
   a
     &:hover
@@ -73,7 +91,7 @@
 
 
 +mQuery(479px)
-  .page-node-type-aankopen //, .page-node-type-geschiedenis
+  .page-node-type-aankopen, .page-node-type-club, .page-node-type-technique, .path-agenda, .page-node-type-page
     .nav-page_top
       color: black
       .menu-wrap_cta
@@ -86,10 +104,25 @@
         color: rgba(0, 0, 0, 1)
         &:hover
           color: rgba(0, 0, 0, 0.5)
+      &.fixednav
+        transition: all 0.9s ease-in-out
+        padding: 10px 35px
+        background: rgba(0, 0, 0, 0.7)
+        li
+          border-right: solid 1px white
+        a, .btn-hamburger_menu
+          color: rgba(255, 255, 255, 1)
+          &:hover
+            color: rgba(255, 255, 255, 0.5)
+            transition: all 0.3s ease-in-out
+
+  .page-node-type-geschiedenis
+    .nav-page_top
+      &.fixednav
+        padding: 10px 35px
 
   .nav-page_top
     font-size: 1em
-    padding: 15px
     .btn-hamburger_menu
       margin-right: 15px
     .social-icons
@@ -98,16 +131,43 @@
       li
         padding-right: 10px
         padding-left: 10px
+    &.fixednav
+      padding: 10px 35px
 
 
 +mQuery(321px)
+  .page-node-type-aankopen, .page-node-type-club, .page-node-type-technique, .path-agenda, .page-node-type-page
+    .nav-page_top
+      font-size: 0.9em
+      color: black
+      padding: 5px 15px
+      .menu-wrap_cta
+        li
+          border-right: solid 1px black
+          &:last-child
+            padding-right: 0
+            border: none
+      a, .btn-hamburger_menu
+        color: rgba(0, 0, 0, 1)
+        &:hover
+          color: rgba(0, 0, 0, 0.5)
+      &.fixednav
+        transition: all 0.9s ease-in-out
+        padding: 5px 15px
+        background: rgba(0, 0, 0, 0.7)
+        li
+          border-right: solid 1px white
+        a, .btn-hamburger_menu
+          color: rgba(255, 255, 255, 1)
+          &:hover
+            color: rgba(255, 255, 255, 0.5)
+            transition: all 0.3s ease-in-out
+
+  .page-node-type-geschiedenis
+    .nav-page_top
+      &.fixednav
+        padding: 5px 15px
+
   .nav-page_top
     font-size: 0.9em
-    .btn-hamburger_menu
-      margin-right: 10px
-    .social-icons
-      display: none
-    .menu-wrap_cta
-      li
-        padding-right: 7px
-        padding-left: 7px
+    padding: 5px 15px
