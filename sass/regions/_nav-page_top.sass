@@ -3,10 +3,12 @@
 // ///////////////////////////
 
 // afhankelijk van soort pagina wordt color white/black
+// .fixednav class toevoegen met fixnav.js nav aanpassing
+// bij het omlaag scrollen
 
 .nav-page_top //default black
   color: black
-  background: rgba(255, 255, 255, 0.1)
+  background: rgba(255, 255, 255, 0.2)
   li
     border-right: solid 1px black
   .menu-wrap_cta
@@ -135,33 +137,13 @@
       padding: 10px 35px
 
 
-+mQuery(321px)
++mQuery(361px)
   .page-node-type-aankopen, .page-node-type-club, .page-node-type-technique, .path-agenda, .page-node-type-page
     .nav-page_top
       font-size: 0.9em
-      color: black
       padding: 5px 15px
-      .menu-wrap_cta
-        li
-          border-right: solid 1px black
-          &:last-child
-            padding-right: 0
-            border: none
-      a, .btn-hamburger_menu
-        color: rgba(0, 0, 0, 1)
-        &:hover
-          color: rgba(0, 0, 0, 0.5)
       &.fixednav
-        transition: all 0.9s ease-in-out
         padding: 5px 15px
-        background: rgba(0, 0, 0, 0.7)
-        li
-          border-right: solid 1px white
-        a, .btn-hamburger_menu
-          color: rgba(255, 255, 255, 1)
-          &:hover
-            color: rgba(255, 255, 255, 0.5)
-            transition: all 0.3s ease-in-out
 
   .page-node-type-geschiedenis
     .nav-page_top
