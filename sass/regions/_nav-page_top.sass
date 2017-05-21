@@ -6,6 +6,7 @@
 
 .nav-page_top //default black
   color: black
+  background: rgba(255, 255, 255, 0.1)
   .menu-wrap_cta
     li
       border-right: solid 1px black
@@ -14,11 +15,15 @@
     &:hover
       color: rgba(0, 0, 0, 0.5)
       transition: all 0.3s ease-in-out
+  &.fixednav
+    background: rgba(255, 255, 255, 0.9)
+
 
 
 .path-frontpage, .page-node-type-aankopen, .page-node-type-geschiedenis
   .nav-page_top //white menu
     color: white
+    background: rgba(0, 0, 0, 0.1)
     .menu-wrap_cta
       li
         border-right: solid 1px white
@@ -27,12 +32,15 @@
       &:hover
         color: rgba(255, 255, 255, 0.5)
         transition: all 0.3s ease-in-out
+    &.fixednav
+      background: rgba(0, 0, 0, 0.7)
 
 
 .nav-page_top
   font-family: open_sansbold
   font-size: 1.4em
-  margin-left: 20px
+  padding: 20px 35px
+  z-index: 900
   a
     &:hover
       text-decoration: none
@@ -63,6 +71,7 @@
         border: none
 
 
+
 +mQuery(479px)
   .page-node-type-aankopen //, .page-node-type-geschiedenis
     .nav-page_top
@@ -80,7 +89,7 @@
 
   .nav-page_top
     font-size: 1em
-    margin-left: 10px
+    padding: 15px
     .btn-hamburger_menu
       margin-right: 15px
     .social-icons
@@ -94,7 +103,6 @@
 +mQuery(321px)
   .nav-page_top
     font-size: 0.9em
-    margin-left: 7px
     .btn-hamburger_menu
       margin-right: 10px
     .social-icons
