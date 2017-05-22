@@ -82,9 +82,20 @@
   </div>
   <div class="col-md-10 text-center">
     <h5>{{ label }}</h5>
-    {{ content.field_boardmember_name }} <br>
-    {{ content.field_boardmember_adres }} <br>
-    {{ content.field_boardmember_phone }} <br>
+    {{ content.field_boardmember_name }}
+    {{ content.field_boardmember_adres }}
+
+    {# gsm klikbaar en https://github.com/illutek/degroote/blob/master/templates/content/node--contactgegevens--full.html.twig#}
+    {% set phone_number = content.field_boardmember_phone|render|striptags %}
+    <div class="boardmember_phone_mobile-view btn btn-default">
+      <a class="btn btn-footer" href="tel:{{ phone_number }}">
+        {{ content.field_boardmember_phone }}
+      </a>
+    </div>
+    <div class="boardmember_phone">
+      {{ content.field_boardmember_phone }}
+    </div>
+
     {{ content.field_boardmember_mail }}
   </div>
 
