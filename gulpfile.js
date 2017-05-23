@@ -41,9 +41,9 @@ var filesToMove = [
     './images/**/*.*',
     './js/**/*.*',
     './templates/**/*.*',
-    './jpkot.info.yml',
-    './jpkot.libraries.yml',
-    './jpkot.theme',
+    './spitfireclub.info.yml',
+    './spitfireclub.libraries.yml',
+    './spitfireclub.theme',
     './readme.md',
     './screenshot.png'
 ];
@@ -58,7 +58,7 @@ gulp.task('move',['clean'], function(){
     // the base option sets the relative root for the set of files,
     // preserving the folder structure
     gulp.src(filesToMove, { base: './' })
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('dist'));
 });
 
 // ///////////////////////////////////////////////////
