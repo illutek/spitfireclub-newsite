@@ -1,0 +1,25 @@
+// //////////////////////////////
+// @@ FONTAWESOME ISONS
+// /////////////////////////////
+
+.icon
+  font-family: FontAwesome
+  display: inline-block
+  padding-right: 10px
+
+.phone-icon
+  &:before
+    content: "\f095"
+    @extend .icon
+
+.mail-icon
+  &:before
+    content: "\f003"
+    @extend .icon
+    padding-right: 5px
+  &:hover
+    &:before
+      content: "\f0e0"
+      @extend .icon
+      padding-right: 5px
+
