@@ -17,9 +17,15 @@ function spitfireclub_theme_suggestions_page_alter(array &$suggestions, array $v
     }
 }
 
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+
 function spitfireclub_form_contact_message_contacteren_form_alter(&$form,\Drupal\Core\Form\FormStateInterface $form_state, $form_id){
     /**
-     * Dit om het form (contact_message_contacteren) in een block in de footer te layouten
+     * Dit om het form (contact_message_contacteren) in een block in de footer te lay-outen
      */
     // Name
     $form['name']['#prefix'] = '<div class="row"><div class="col-sm-5"><div class="form-group">';
