@@ -42,11 +42,13 @@ https://www.drupal.org/
 
 #### Modules  
 
-- Backup and migrate https://www.drupal.org/project/backup_migrate  
-- Path_auto https://www.drupal.org/project/pathauto  
-- Better_login  https://www.drupal.org/project/betterlogin 
+- Backup_migrate https://www.drupal.org/project/backup_migrate  
+- Pathauto https://www.drupal.org/project/pathauto  
 - Colorbox  https://www.drupal.org/project/colorbox  
-- Webforms  https://www.drupal.org/project/webform
+- Webform  https://www.drupal.org/project/webform
+- Honeypot  https://www.drupal.org/project/honeypot
+- xmlsitemap  https://www.drupal.org/project/xmlsitemap
+- Metatag  https://www.drupal.org/project/metatag
 
 ### Local environment  
 
