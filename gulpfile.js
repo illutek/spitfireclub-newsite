@@ -59,7 +59,7 @@ gulp.task('dist', ['clean'], function () {
 // ////////////////////////////////////////////////
 
 gulp.task('compress-images', function(){
-    return gulp.src('images/*')
+    return gulp.src('images/**')
         .pipe(imagemin({ progressive: true }))
         .pipe(gulp.dest('dist/images/'));
 });
