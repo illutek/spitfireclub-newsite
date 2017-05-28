@@ -23,8 +23,16 @@
       @extend .icon
       padding-right: 5px
 
-// TODO icon toevoegen zoals hier boven zal met field.html.twig moeten
+
+// Bij agenda
 .date-icon
   &:before
     @extend .icon
     content: "\f073"
+
+// geen icon bij de teaser display
+.path-agenda
+  .date-icon
+    &:before
+      content: ''
+      padding-right: 0
