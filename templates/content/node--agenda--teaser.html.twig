@@ -76,7 +76,11 @@
 {% set classes = [
 'col-md-3',
 ] %}
-
+{#
+/**
+* zet variabele text gelijk aan content body zonder de tags
+/*
+#}
 {% set text = content.body|render|striptags %}
 
 <article{{ attributes.addClass(classes) }}>
@@ -89,9 +93,25 @@
       {{ content.field_agenda_date }}
     </div>
     <p>
+      {#
+      /**
+      * controleer var text op lengte als de text langer is dan
+      * 100 karakters deze afkappen (slice) op 100 karakters en
+      * ... toevoegen, anders : text dus volledige text afprinten
+      * volgende is een korte schrijfwijze van if statment
+      * {{ condition ? if : else }}
+      */
+      #}
       {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
     </p>
 
+    {#
+    /**
+    * class agenda_readmore en hide gelijkstellen aan een variable
+    * afhankelijk van de conditie text|lenght deze class printen
+    * dit om de btn readmore te tonen/verbergen
+    */
+    #}
     {% set readmore = "agenda_readmore" %}
     {% set hide = "readmore_hide" %}
 
