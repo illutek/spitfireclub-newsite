@@ -16,14 +16,15 @@ Als package manager voor template afhankelijke componenten
 https://www.npmjs.com/  
 Als package manager voor produktie tools enkel gulp 
 http://gulpjs.com/   
-een automate tool hier als sass compiler en voor het aanmaken van dist folder    
+een automate tool hier als sass compiler en voor het aanmaken van dist folder   
 - gulp
 - gulp-clean
 - gulp-minify-css
 - gulp-plumber
 - gulp-rename
 - gulp-sass
-- gulp-sourcemaps  
+- gulp-sourcemaps
+- gulp-imagemin   
 
 (file gulpfile.js)  
 (file voor npm package.json - directory node_modules)  
