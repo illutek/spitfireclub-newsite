@@ -14,6 +14,17 @@
     .agenda-page-content
       h2
         color: $dark-gray
+  .agenda_beyond
+    // melding voorbije agenda-items op full view verbergeb
+    display: none
+  .agenda_overview
+    display: block
+    padding: 15px 0 15px 15px
+    a
+      color: $dark-gray
+
+// node--agenda--full.html.twig
+// ===================================================
 .agenda_date
   margin-bottom: 1em
   font-size: 1.25em
@@ -22,14 +33,28 @@
   color: white
   // the icon on components/_fontawesome-icons.sass
 
-.agenda_file
-  border-top: 1px solid $dark-gray
-  margin-top: 1em
-  padding-top: 1em
+.agenda-node-content
+  padding: 0 25px
+  .agenda_body
+  .agenda_file
+    border-top: 1px solid $dark-gray
+    margin-top: 1em
+    padding-top: 1em
 
 
 // TEASER VIEW
 // ====================================================
+.path-agenda
+  // melding voorbije agenda-items enkel op teaser view
+  .agenda_beyond
+    display: block
+    clear: both
+    padding: 15px 0 15px 15px
+    a
+      color: white
+  .agenda_overview
+    display: none
+
 .agenda-page-wrap
   padding: 1em
   background-color: $dark-gray
@@ -39,11 +64,6 @@
     h2
       color: white
       margin-left: 15px
-  .agenda_beyond
-    clear: both
-    padding: 15px 0 15px 15px
-    a
-      color: white
 
   .agenda-teaser-wrap
     padding: 1em

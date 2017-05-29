@@ -86,26 +86,27 @@
     <div class="agenda_date">
       {{ content.field_agenda_date }}
     </div>
-    <div class="agenda_img float_left">
-      {{ content.field_agenda_img }}
-    </div>
-    <div class="agenda_body">
-      {{ content.body }}
-    </div>
-    {#
-    /**
-    * dit had ook gewoon weg gekund in het inhoudstype
-    * weergave beheren maar nu heb ik iets meer controle
-    * over de opmaak van het label
-    */
-    #}
-    {% if content.field_agenda_file|render|trim is not empty %}
-      <div class="agenda_file">
-        <div class="float_left">Bijlage:</div>
-         {{ content.field_agenda_file }}
+    <div class="agenda-node-content">
+      <div class="agenda_img float_left">
+        {{ content.field_agenda_img }}
       </div>
-    {% endif %}
-
+      <div class="agenda_body">
+        {{ content.body }}
+      </div>
+      {#
+      /**
+      * dit had ook gewoon weg gekund in het inhoudstype
+      * weergave beheren maar nu heb ik iets meer controle
+      * over de opmaak van het label
+      */
+      #}
+      {% if content.field_agenda_file|render|trim is not empty %}
+        <div class="agenda_file">
+          <div class="float_left">Bijlage:</div>
+          {{ content.field_agenda_file }}
+        </div>
+      {% endif %}
+    </div>
+    {#end agenda-node-content#}
   </div>
-
 </article>
