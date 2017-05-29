@@ -1,28 +1,49 @@
 // //////////////////////////////
 // @@ FONTAWESOME ISONS
 // /////////////////////////////
+// http://fontawesome.io/cheatsheet/
 
 .icon
   font-family: FontAwesome
   display: inline-block
   padding-right: 10px
 
+.bars-icon
+  &:before
+    @extend .icon
+    content: "\f0c9"
+
+.close-icon
+  &:before
+    @extend .icon
+    content: "\f00d"
+    font-size: 2em
+
 .phone-icon
   &:before
-    content: "\f095"
     @extend .icon
+    content: "\f095"
 
 .mail-icon
   &:before
-    content: "\f003"
     @extend .icon
+    content: "\f003"
     padding-right: 5px
   &:hover
     &:before
-      content: "\f0e0"
       @extend .icon
+      content: "\f0e0"
       padding-right: 5px
 
+.back-icon
+  &:before
+    @extend .icon
+    content: "\f100"
+
+.facebook-icon
+  &:before
+    @extend .icon
+    content: '\f09a'
 
 // Bij agenda
 .date-icon
