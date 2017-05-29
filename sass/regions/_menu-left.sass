@@ -2,6 +2,12 @@
 // @@ MENU-LEFT
 // ///////////////////////////
 
+.hover-extend
+  text-decoration: none
+  color: rgba(255, 255, 255, 0.5)
+  transition: all 0.3s ease-in-out
+
+
 .menu-left-wrapper
   color: white
   width: 400px
@@ -15,6 +21,8 @@
   z-index: 999
   .close-btn
     cursor: pointer
+    &:hover
+      @extend .hover-extend
   &.menu-left__visible
     +transition(0.5s)
     transform: translate(400px,0px)
@@ -34,15 +42,17 @@
           // best meevalt
           display: block
           &:hover
-            text-decoration: none
-            color: rgba(255, 255, 255, 0.5)
-            transition: all 0.3s ease-in-out
+            @extend .hover-extend
 
 
 // Footer region on menu-left
 
 .menu-left__footer
   margin-top: 50px
+  .facebook-icon
+    color: white
+    &:hover
+      @extend .hover-extend
   .menu-left__footer-copy
     font-size: 0.55em
     padding-right: 20px
