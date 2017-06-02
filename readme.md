@@ -1,5 +1,11 @@
 ## Spitfireclub Vlaanderen vzw
 
+Een eindwerk voor het cvo in Heusden-Zolder http://www.cvodeverdieping.be/  
+In opdracht van Koen Timmers https://www.zelfstudie.be/
+
+De files in deze git repository zijn de sources files voor de template, de template zelf 
+komt in de dist folder met de gulp functie dist.
+
 ### TOOLS VOOR THEMING
 
 #### PHOTOSHOP CS6
@@ -16,10 +22,11 @@ Als package manager voor template afhankelijke componenten
 https://www.npmjs.com/  
 Als package manager voor produktie tools enkel gulp 
 http://gulpjs.com/   
-een automate tool hier als sass compiler en voor het aanmaken van dist folder   
+een automate tool hier als sass compiler en voor het aanmaken van dist folder  
+maar ook het comprimeren van afbeeldingen
 - gulp
 - gulp-clean
-- gulp-minify-css
+- gulp-rimraf
 - gulp-plumber
 - gulp-rename
 - gulp-sass
@@ -54,7 +61,35 @@ https://www.drupal.org/
 ### Local environment  
 
 - Laptop in docker container met  https://github.com/wodby/docker4drupal  
-- Local server CentOS
+- Local server CentOS  
+
+##### Reclame voor sass syntax
+
+De scss syntax.  
+
+```
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: white;
+    }
+}
+```
+De sass syntax
+
+```
+a
+  color: white
+  text-decoration: none
+  &:hover
+    text-decoration: none
+    color: white
+```  
+
+Nadeel de vele voorbeeld code is meestal in scss geschreven dus enig aanpassingen 
+elke keer
 
 
 
