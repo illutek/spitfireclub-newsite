@@ -25,7 +25,6 @@ http://gulpjs.com/
 een automate tool hier als sass compiler en voor het aanmaken van dist folder  
 maar ook het comprimeren van afbeeldingen
 - gulp
-- gulp-clean
 - gulp-rimraf
 - gulp-plumber
 - gulp-rename

@@ -6,7 +6,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
-var rename = require('gulp-rename');
 var clean = require('gulp-rimraf');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
