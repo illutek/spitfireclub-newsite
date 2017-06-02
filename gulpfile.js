@@ -1,11 +1,13 @@
 /**
  * Created by stefan on 09.05.17.
+ * gulp-clean is replaced by gulp-rimraf
+ * http://learningwithjb.com/posts/cleaning-our-build-folder-with-gulp
  */
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
-var clean = require('gulp-clean');
+var clean = require('gulp-rimraf');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
 //var browserSync = require('browser-sync').create();
@@ -24,7 +26,7 @@ gulp.task('sass', function () {
 
 
 // ///////////////////////////////////////////////////
-// build folder
+// DIST FOLDER
 // //////////////////////////////////////////////////
 
 var filesToMove = [
@@ -41,12 +43,13 @@ var filesToMove = [
     './screenshot.png'
 ];
 
+// Clean up dist folder
 gulp.task('clean', function () {
     return gulp.src(['dist/*'], {read: false})
         .pipe(clean());
 });
 
-
+// Create dist folder
 gulp.task('dist', ['clean'], function () {
     // the base option sets the relative root for the set of files,
     // preserving the folder structure
