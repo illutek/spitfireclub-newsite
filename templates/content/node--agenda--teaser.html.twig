@@ -92,18 +92,19 @@
     <div class="agenda-teaser-date">
       {{ content.field_agenda_date }}
     </div>
-    <p>
-      {#
-      /**
-      * controleer var text op lengte als de text langer is dan
-      * 100 karakters deze afkappen (slice) op 100 karakters en
-      * ... toevoegen, anders : text dus volledige text afprinten
-      * volgende is een korte schrijfwijze van if statment
-      * {{ condition ? if : else }}
-      */
-      #}
-      {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
-    </p>
+    <div class="agenda-teaser-body">
+        {#
+        /**
+        * controleer var text op lengte als de text langer is dan
+        * 100 karakters deze afkappen (slice) op 100 karakters en
+        * ... toevoegen, anders : text dus volledige text afprinten
+        * volgende is een korte schrijfwijze van if statment
+        * {{ condition ? if : else }}
+        */
+        #}
+        {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
+    </div>
+
 
     {#
     /**
@@ -115,9 +116,15 @@
     {% set readmore = "agenda_readmore" %}
     {% set hide = "readmore_hide" %}
 
-    <div class="{{ text|length > 100 ? readmore : hide }}">
-      <a class="btn btn-default" href="{{ url }}"> {{ "Meer info" }}</a>
-    </div>
+    {% if content.field_agenda_file|render|trim is not empty %}
+      <div class="{{ readmore }}">
+        <a class="btn btn-default" href="{{ url }}"> {{ "Meer info" }}</a>
+      </div>
+    {% else %}
+      <div class="{{ text|length > 100 ? readmore : hide }}">
+        <a class="btn btn-default" href="{{ url }}"> {{ "Meer info" }}</a>
+      </div>
+    {% endif %}
   </div>
 
 </article>
