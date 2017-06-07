@@ -55,7 +55,10 @@ https://www.drupal.org/
 - Webform  https://www.drupal.org/project/webform
 - Honeypot  https://www.drupal.org/project/honeypot
 - xmlsitemap  https://www.drupal.org/project/xmlsitemap
-- Metatag  https://www.drupal.org/project/metatag
+- Google analytics https://www.drupal.org/project/google_analytics
+- Metatag  https://www.drupal.org/project/metatag  
+
+De libraries die bij webform horen met drush webform-libraries-composer
 
 ### Local environment  
 
