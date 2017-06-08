@@ -111,6 +111,7 @@
     * class agenda_readmore en hide gelijkstellen aan een variable
     * afhankelijk van de conditie text|lenght deze class printen
     * dit om de btn readmore te tonen/verbergen
+    * ook readmore tonen als er een file is toegevoegd
     */
     #}
     {% set readmore = "agenda_readmore" %}
@@ -118,13 +119,11 @@
 
     {% if content.field_agenda_file|render|trim is not empty %}
       <div class="{{ readmore }}">
-        <a class="btn btn-default" href="{{ url }}"> {{ "Meer info" }}</a>
-      </div>
     {% else %}
       <div class="{{ text|length > 100 ? readmore : hide }}">
+    {% endif %}
         <a class="btn btn-default" href="{{ url }}"> {{ "Meer info" }}</a>
       </div>
-    {% endif %}
   </div>
 
 </article>
