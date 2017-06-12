@@ -73,9 +73,26 @@
  */
 #}
 
-{% set classes = [
-'col-md-3',
-] %}
+{#
+     /**
+     * Om de raw value date uit het field_agenda_date te trekken een extra
+     * module installenren twig_field_value
+     */
+     #}
+    {% set agendaDate = content.field_agenda_date|field_raw.value %}
+
+    {% if "now"|date('U') > agendaDate|date('U') %}
+      {% set classes = [
+      'col-md-3',
+        'agenda-item-past'
+      ] %}
+    {% else %}
+      {% set classes = [
+      'col-md-3',
+      'agenda-item-active'
+      ] %}
+    {% endif %}
+
 {#
 /**
 * zet variabele text gelijk aan content body zonder de tags
@@ -86,6 +103,9 @@
 <article{{ attributes.addClass(classes) }}>
 
   <div{{ content_attributes.addClass('agenda-teaser-wrap') }}>
+
+
+
     <div class="agenda-teaser-title">
       {{ label }}
     </div>
@@ -93,16 +113,16 @@
       {{ content.field_agenda_date }}
     </div>
     <div class="agenda-teaser-body">
-        {#
-        /**
-        * controleer var text op lengte als de text langer is dan
-        * 100 karakters deze afkappen (slice) op 100 karakters en
-        * ... toevoegen, anders : text dus volledige text afprinten
-        * volgende is een korte schrijfwijze van if statment
-        * {{ condition ? if : else }}
-        */
-        #}
-        {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
+      {#
+      /**
+      * controleer var text op lengte als de text langer is dan
+      * 100 karakters deze afkappen (slice) op 100 karakters en
+      * ... toevoegen, anders : text dus volledige text afprinten
+      * volgende is een korte schrijfwijze van if statment
+      * {{ condition ? if : else }}
+      */
+      #}
+      {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
     </div>
 
 
@@ -118,12 +138,12 @@
     {% set hide = "readmore_hide" %}
 
     {% if content.field_agenda_file|render|trim is not empty %}
-      <div class="{{ readmore }}">
-    {% else %}
+    <div class="{{ readmore }}">
+      {% else %}
       <div class="{{ text|length > 100 ? readmore : hide }}">
-    {% endif %}
+        {% endif %}
         <a class="btn btn-default" href="{{ url }}"> {{ "Meer info" }}</a>
       </div>
-  </div>
+    </div>
 
 </article>
