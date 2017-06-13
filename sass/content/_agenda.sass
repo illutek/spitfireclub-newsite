@@ -67,34 +67,43 @@
       margin-left: 15px
 
 
-  // TODO agenda-item-past en agenda-item-active onder agenda-teaser-wrap plaatsen
-  .agenda-item-past
-    color: grey
-    .agenda-teaser-date
-      color: grey
-
   .agenda-teaser-wrap
     padding: 1em
     background-color: white
     height: 350px
     margin-bottom: 30px
-    .agenda-teaser-title
-      margin-bottom: 10px
-    .agenda-teaser-date
-      font-family: 'racing_sans_oneregular'
-      color: $dark-gray
-      text-align: center
-      margin: 35px 0
-      font-size: 4em
-    .agenda-teaser-body
-      min-height: 125px
-    .agenda_readmore
-      text-align: right
-      margin-top: 1em
-    .readmore_hide
-      display: none
 
+  .agenda-teaser-title
+    margin-bottom: 10px
+  .agenda-teaser-date
+    font-family: 'racing_sans_oneregular'
+    color: $dark-gray
+    text-align: center
+    margin: 35px 0
+    font-size: 4em
+  .agenda-teaser-body
+    min-height: 125px
+  .agenda_readmore
+    text-align: right
+    margin-top: 1em
+  .readmore_hide
+    display: none
+
+  // opmaak voorbije agenda-items
+  .agenda-item-past
+    color: $gray
+    .agenda-overlay
+      position: absolute
+      top: 0px
+      left: 140px
+      width: 1px
+      height: 350px
+      background: $gray
+      transform: rotate(35deg)
+    .agenda-teaser-date
+      color: $gray
 
 +mQuery(479px)
   .agenda-teaser-wrap
-    height: 290px
+    .agenda-item-past
+      //display: none

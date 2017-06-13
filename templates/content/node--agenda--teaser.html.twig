@@ -74,25 +74,17 @@
 #}
 
 {#
-     /**
-     * Om de raw value date uit het field_agenda_date te trekken een extra
-     * module installenren twig_field_value
-     */
-     #}
-    {% set agendaDate = content.field_agenda_date|field_raw.value %}
+ /**
+  * Om de raw value date uit het field_agenda_date te trekken een extra
+  * module installenren twig_field_value
+ */
+ #}
+{% set agendaDate = content.field_agenda_date|field_raw.value %}
 
-    {% if "now"|date('U') > agendaDate|date('U') %}
-      {% set classes = [
-      'col-md-3',
-        'agenda-item-past'
-      ] %}
-    {% else %}
-      {% set classes = [
-      'col-md-3',
-      'agenda-item-active'
-      ] %}
-    {% endif %}
-
+{% set classes = [
+'col-md-3',
+'agenda-item'
+] %}
 {#
 /**
 * zet variabele text gelijk aan content body zonder de tags
@@ -104,46 +96,52 @@
 
   <div{{ content_attributes.addClass('agenda-teaser-wrap') }}>
 
-
-
-    <div class="agenda-teaser-title">
-      {{ label }}
-    </div>
-    <div class="agenda-teaser-date">
-      {{ content.field_agenda_date }}
-    </div>
-    <div class="agenda-teaser-body">
-      {#
-      /**
-      * controleer var text op lengte als de text langer is dan
-      * 100 karakters deze afkappen (slice) op 100 karakters en
-      * ... toevoegen, anders : text dus volledige text afprinten
-      * volgende is een korte schrijfwijze van if statment
-      * {{ condition ? if : else }}
-      */
-      #}
-      {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
-    </div>
-
-
-    {#
-    /**
-    * class agenda_readmore en hide gelijkstellen aan een variable
-    * afhankelijk van de conditie text|lenght deze class printen
-    * dit om de btn readmore te tonen/verbergen
-    * ook readmore tonen als er een file is toegevoegd
-    */
-    #}
-    {% set readmore = "agenda_readmore" %}
-    {% set hide = "readmore_hide" %}
-
-    {% if content.field_agenda_file|render|trim is not empty %}
-    <div class="{{ readmore }}">
+    {% if "now"|date('U') > agendaDate|date('U') %}
+    <div class="agenda-item-past">
+      <div class="agenda-overlay"></div>
       {% else %}
-      <div class="{{ text|length > 100 ? readmore : hide }}">
+      <div class="agenda-item-active">
         {% endif %}
-        <a class="btn btn-default" href="{{ url }}"> {{ "Meer info" }}</a>
+
+        <div class="agenda-teaser-title">
+          {{ label }}
+        </div>
+        <div class="agenda-teaser-date">
+          {{ content.field_agenda_date }}
+        </div>
+        <div class="agenda-teaser-body">
+          {#
+          /**
+          * controleer var text op lengte als de text langer is dan
+          * 100 karakters deze afkappen (slice) op 100 karakters en
+          * ... toevoegen, anders : text dus volledige text afprinten
+          * volgende is een korte schrijfwijze van if statment
+          * {{ condition ? if : else }}
+          */
+          #}
+          {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
+        </div>
+
+
+        {#
+        /**
+        * class agenda_readmore en hide gelijkstellen aan een variable
+        * afhankelijk van de conditie text|lenght deze class printen
+        * dit om de btn readmore te tonen/verbergen
+        * ook readmore tonen als er een file is toegevoegd
+        */
+        #}
+        {% set readmore = "agenda_readmore" %}
+        {% set hide = "readmore_hide" %}
+
+        {% if content.field_agenda_file|render|trim is not empty %}
+        <div class="{{ readmore }}">
+          {% else %}
+          <div class="{{ text|length > 100 ? readmore : hide }}">
+            {% endif %}
+            <a class="btn btn-default" href="{{ url }}"> {{ "Meer info" }}</a>
+          </div>
+        </div>
       </div>
-    </div>
 
 </article>
