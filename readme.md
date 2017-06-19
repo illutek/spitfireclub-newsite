@@ -97,7 +97,9 @@ a
 ```  
 
 Nadeel de vele voorbeeld code is meestal in scss geschreven dus enig aanpassingen 
-elke keer
+elke keer.
+
+
 
 
 
