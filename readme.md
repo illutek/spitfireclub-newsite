@@ -100,5 +100,6 @@ Nadeel de vele voorbeeld code is meestal in scss geschreven dus enig aanpassinge
 elke keer
 
 ![ps-256x256](https://user-images.githubusercontent.com/7737763/27281001-5a5b3588-54ea-11e7-8bae-d9daac849673.png)
+![bootstrap](https://user-images.githubusercontent.com/7737763/27281319-ad0ef584-54eb-11e7-90c2-2f7a5d2d9b87.png)
+![bower](https://user-images.githubusercontent.com/7737763/27281321-af9edd78-54eb-11e7-8564-3782dcc37f19.png)
 
- 
