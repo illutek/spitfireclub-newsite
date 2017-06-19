@@ -40,6 +40,12 @@ maar ook het comprimeren van afbeeldingen
 (file gulpfile.js)  
 (file voor npm package.json - directory node_modules)  
 
+##### YARN  
+Ook een package manager - tegen hanger van npm dit ook eens getest vandaar
+het yarn.lock file.  
+Een aantal voordelen tov npm (vooral snelheid)  
+https://yarnpkg.com/lang/en/
+
 #### GIT
 Met deze keer een GUI https://www.gitkraken.com/   
 Github https://github.com/illutek/spitfireclub-newsite 
