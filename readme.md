@@ -41,7 +41,7 @@ maar ook het comprimeren van afbeeldingen
 (file voor npm package.json - directory node_modules)  
 
 ##### YARN  
-Ook een package manager - tegen hanger van npm dit ook eens getest vandaar
+Ook een package manager - tegenhanger van npm dit ook eens getest vandaar
 het yarn.lock file.  
 Een aantal voordelen tov npm (vooral snelheid)  
 https://yarnpkg.com/lang/en/
