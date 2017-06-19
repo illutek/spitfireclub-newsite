@@ -3,8 +3,13 @@
 Een eindwerk voor het cvo in Heusden-Zolder http://www.cvodeverdieping.be/  
 In opdracht van Koen Timmers https://www.zelfstudie.be/
 
-De files in deze git repository zijn de sources files voor de template, de template zelf 
-komt in de dist folder met de gulp functie dist.
+De files in deze git repository zijn de sources files voor de template.  
+Stappen om template op te zetten.   
+1. Clone of download deze repository uiteraard.  
+2. bower install om de bower componenten.  
+3. npm install voor automatie tool gulp.  
+4. run gulp voor sass compileren.  
+5. run gulp dist on dist folder op te bouwen.  
 
 ### TOOLS VOOR THEMING
 
@@ -56,7 +61,8 @@ https://www.drupal.org/
 - Honeypot  https://www.drupal.org/project/honeypot
 - xmlsitemap  https://www.drupal.org/project/xmlsitemap
 - Google analytics https://www.drupal.org/project/google_analytics
-- Metatag  https://www.drupal.org/project/metatag  
+- Metatag  https://www.drupal.org/project/metatag 
+- Twig Field Value https://www.drupal.org/project/twig_field_value
 
 De libraries die bij webform horen met drush webform-libraries-composer
 
