@@ -11,5 +11,6 @@ libraries:
 
 regions:
   content:  Content
+  news: News
   footercontact: 'Footer contact'
   boardmembers: Bestuursleden
