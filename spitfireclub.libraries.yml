@@ -19,6 +19,10 @@ backstretch:
     bower_components/jquery-backstretch/jquery.backstretch.min.js: {}
     js/backstretch_drupal.js: {}
 
+news:
+  js:
+    js/news.js: {}
+
 globaljs:
   js:
     js/menu.js: {}

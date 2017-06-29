@@ -4,11 +4,27 @@
 
 .news-wrap
   background: white
-  min-height: 300px
   width: 300px
   position: absolute
   z-index: 899
   right: 0
   bottom: 0
-  .news-title
+  &.news-wrap-hide
+    height: 55px
+  .news-title-wrap
     border-bottom: solid 1px $gray
+    padding: 5px 0 5px 10px
+    overflow: hidden
+    .news-title
+      float: left
+      h5
+        font-family: 'racing_sans_oneregular'
+        font-size: 1.6em
+    .news-show-hide-wrap
+      float: right
+  .news-body
+    font-size: 0.7em
+    padding: 15px
+    h6
+      font-size: 1.4em
+      margin-bottom: 10px

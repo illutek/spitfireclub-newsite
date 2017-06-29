@@ -3,9 +3,14 @@
  * News enkel  op de front-page onderaan rechts
 */
 #}
-
 <section class="news-wrap">
-  <div class="news-title"><h5>Nieuws</h5></div>
-  {{ page.news }}
+  <div class="news-title-wrap">
+    <div class="news-title"><h5>Nieuws</h5></div>
+    <div class="news-show-hide-wrap">
+      <a href="#" class="show-hide-icon"></a>
+    </div>
+  </div>
+  <div class="news-body">
+    {{ page.news }}
+  </div>
 </section>
-
