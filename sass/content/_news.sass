@@ -9,8 +9,6 @@
   z-index: 899
   right: 0
   bottom: 0
-  &.news-wrap-hide
-    height: 55px
   .news-title-wrap
     border-bottom: solid 1px $gray
     padding: 5px 0 5px 10px
@@ -22,9 +20,12 @@
         font-size: 1.6em
     .news-show-hide-wrap
       float: right
+      margin-top: 8px
   .news-body
     font-size: 0.7em
     padding: 15px
     h6
       font-size: 1.4em
       margin-bottom: 10px
+    &.news-body-hide
+      display: none
