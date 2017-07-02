@@ -15,7 +15,7 @@ var imagemin = require('gulp-imagemin');
 // Sass to css
 // /////////////////////////////////////////////
 gulp.task('sass', function () {
-    return gulp.src('sass/styles.sass')
+    return gulp.src('styles.sass')
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass({outputStyle: 'compressed'}).on('error',sass.logError))
@@ -71,6 +71,7 @@ gulp.task('compress-images', function(){
 // ///////////////////////////////////////////////////
 gulp.task('watch', function () {
     gulp.watch('sass/**/*.{scss,sass}', ['sass']);
+
 });
 
 // ///////////////////////////////////////////////////
