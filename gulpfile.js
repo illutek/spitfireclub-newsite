@@ -70,11 +70,11 @@ gulp.task('compress-images', function(){
 // Watch Task
 // ///////////////////////////////////////////////////
 gulp.task('watch', function () {
-    gulp.watch('sass/**/*.{scss,sass}', ['sass']);
+    gulp.watch(['sass/**/*.{scss,sass}', 'styles.sass'], ['sass', 'dist']);
 
 });
 
 // ///////////////////////////////////////////////////
 // Default Task
 // ///////////////////////////////////////////////////
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'watch', 'dist']);
